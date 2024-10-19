@@ -1,0 +1,21 @@
+---
+layout: post
+comments: false
+title:  "Compilers and LLVM for Matrix Multipliaction"
+excerpt: "How could we add Matrix representation to our language?"
+date:   2024-10-18 22:00:00
+---
+
+### LLVM
+
+> Note, this is the study of LLVM IR 
+
+<!-- <div style="text-align:center;"><img src="/assets/cifar_preview.png"></div> -->
+
+
+Bsaic `LLVM IR` for a new language  
+
+```cpp
+struct ExprNode
+```
+

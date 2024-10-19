@@ -3,7 +3,25 @@ layout: default
 ---
 
 <div class="home">
-  
+
+  <!-- Add your custom content here -->
+  <section style="text-align: center;">
+    <div class="profile-image">
+      <img src="/images/jv.png" alt="Profile Image">
+    </div>
+    
+    <h2 style="text-align: center;  font-size: 2em;">Hello World!</h2>
+    <p>I drink a lot of coffee and I try to be a better computer scientist over time. ☕ 🌎 🌌</p>
+    <p>This blog serves as an information space focusing on areas that interest me and that I would like to research..</p>
+
+    <h3 style="text-align: center;">TODO</h3>
+    <p>Sorry for any delays, broken links, and ugly layouts; still working on finishing this up.</p>
+
+  </section>
+  <br/>
+  <hr/>
+  <br/>
+  <!-- Blog post list -->
   <ul class="posts">
     {% for post in site.posts %}
       <li>
@@ -14,5 +32,4 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-
 </div>

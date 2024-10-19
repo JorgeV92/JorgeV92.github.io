@@ -1,4 +1,4 @@
 # My blog
 
-This is my blog, uses [Jekyll](http://jekyllrb.com/). I was tired of bloated, slow Wordpress that locked up all my content.
+This blog was largerly motivated by  <a href="https://karpathy.ai/" style= " text-decoration: none;"> Andrej Karpathy </a> and a personal professor at the University of Illinois at Urbana-Champaign <a href="https://jeffe.cs.illinois.edu/" style= "text-decoration: none;"> Jeff Erickson</a>. , uses [Jekyll](http://jekyllrb.com/). 
 

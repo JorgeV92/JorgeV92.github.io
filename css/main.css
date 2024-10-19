@@ -424,3 +424,19 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.profile-image img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
