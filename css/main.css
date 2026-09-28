@@ -261,6 +261,18 @@ a:visited { color: #205caa; }
   overflow-wrap: normal;
 }
 
+/* Mermaid diagrams rendered from Markdown code fences. */
+.page-content .mermaid {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.page-content .mermaid > svg {
+  display: block;
+  margin-inline: auto;
+}
+
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;

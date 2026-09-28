@@ -1,0 +1,38 @@
+<script type="module">
+  const blocks = document.querySelectorAll(
+    '.page-content pre > code.language-mermaid, .page-content .language-mermaid pre > code'
+  );
+
+  if (blocks.length > 0) {
+    try {
+      const { default: mermaid } = await import(
+        'https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs'
+      );
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'strict',
+        suppressErrorRendering: true,
+        // Mermaid 12 otherwise reserves 120px even for a single-letter label.
+        flowchart: { minNodeWidth: 0 }
+      });
+
+      for (const code of blocks) {
+        const pre = code.parentElement;
+        const original = pre.closest('.highlighter-rouge') || pre;
+        const diagram = document.createElement('div');
+        diagram.className = 'mermaid';
+        diagram.textContent = code.textContent;
+        original.replaceWith(diagram);
+
+        try {
+          await mermaid.run({ nodes: [diagram] });
+        } catch (error) {
+          diagram.replaceWith(original);
+          console.error('Unable to render Mermaid diagram:', error);
+        }
+      }
+    } catch (error) {
+      console.error('Unable to load Mermaid:', error);
+    }
+  }
+</script>
